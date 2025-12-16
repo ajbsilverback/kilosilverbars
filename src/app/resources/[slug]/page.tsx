@@ -9,6 +9,7 @@ import QASection from "@/components/QASection";
 import Container from "@/components/Container";
 import { resourceQA } from "@/data/qa-content";
 import { fetchProductSpot } from "@/lib/monexSpot";
+import { replaceTokens } from "@/lib/priceTokens";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -51,10 +52,6 @@ function getMonexAnchorText(slug: string): string {
   return resource?.monexAnchorText || "Monex silver resources";
 }
 
-// Replace price tokens in content strings
-function replacePriceTokens(text: string, barPrice: string): string {
-  return text.replace(/\{\{BAR_PRICE\}\}/g, barPrice);
-}
 
 // Generate AI summary bullets based on resource content
 function generateAISummaryBullets(slug: string, title: string): string[] {
@@ -168,9 +165,6 @@ export default async function ResourcePage({ params }: Props) {
   
   // Fetch price data for dynamic FAQ tokens and article content
   const priceData = await fetchProductSpot();
-  const formattedBarPrice = priceData 
-    ? `$${Math.round(priceData.ask * SITE_CONFIG.troyOunces).toLocaleString("en-US")}` 
-    : "$1,000";
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -277,7 +271,7 @@ export default async function ResourcePage({ params }: Props) {
               {content.keyTakeaways.map((takeaway, index) => (
                 <li key={index} className="flex items-start text-gray-700 text-sm md:text-base">
                   <span className="text-navy-600 mr-2 mt-0.5">•</span>
-                  <span>{replacePriceTokens(takeaway, formattedBarPrice)}</span>
+                  <span>{replaceTokens(takeaway, priceData)}</span>
                 </li>
               ))}
             </ul>
@@ -299,7 +293,7 @@ export default async function ResourcePage({ params }: Props) {
                     key={pIndex}
                     className="text-gray-600 leading-relaxed text-base md:text-lg"
                   >
-                    {replacePriceTokens(paragraph, formattedBarPrice)}
+                    {replaceTokens(paragraph, priceData)}
                   </p>
                 ))}
                 {section.subheading && (
@@ -312,7 +306,7 @@ export default async function ResourcePage({ params }: Props) {
                         key={sIndex}
                         className="text-gray-600 leading-relaxed text-base md:text-lg"
                       >
-                        {replacePriceTokens(paragraph, formattedBarPrice)}
+                        {replaceTokens(paragraph, priceData)}
                       </p>
                     ))}
                   </div>

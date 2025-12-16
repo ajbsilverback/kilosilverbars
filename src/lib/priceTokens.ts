@@ -35,7 +35,7 @@ function roundToNearest(value: number, increment: number): number {
 }
 
 /**
- * Formats a price value for display (e.g., "~$132,500")
+ * Formats a price value for display (e.g., "~$1,100")
  */
 function formatPrice(value: number, prefix: string = "~"): string {
   const formatted = new Intl.NumberFormat("en-US", {
@@ -51,16 +51,17 @@ function formatPrice(value: number, prefix: string = "~"): string {
  * Token types supported by the system
  */
 export type PriceTokenType = 
-  | "CAPITAL_REQUIREMENT"           // ~$132,500 (ask price rounded)
-  | "CAPITAL_REQUIREMENT_RANGE"     // ~$126,000–$139,000 (ask ± premium band)
-  | "CAPITAL_REQUIREMENT_PLUS"      // ~$132,500+ (ask rounded with plus)
-  | "LIQUIDITY_THRESHOLD";          // ~$132,500+ (same as plus, for liquidity context)
+  | "BAR_PRICE"                     // $1,100 (ask price formatted, no tilde)
+  | "CAPITAL_REQUIREMENT"           // ~$1,100 (ask price rounded)
+  | "CAPITAL_REQUIREMENT_RANGE"     // ~$1,000–$1,200 (ask ± premium band)
+  | "CAPITAL_REQUIREMENT_PLUS"      // ~$1,100+ (ask rounded with plus)
+  | "LIQUIDITY_THRESHOLD";          // ~$1,100+ (same as plus, for liquidity context)
 
 /**
  * Regex pattern to match tokens in strings
  * Matches: {{TOKEN_NAME}}
  */
-const TOKEN_PATTERN = /\{\{(CAPITAL_REQUIREMENT|CAPITAL_REQUIREMENT_RANGE|CAPITAL_REQUIREMENT_PLUS|LIQUIDITY_THRESHOLD)\}\}/g;
+const TOKEN_PATTERN = /\{\{(BAR_PRICE|CAPITAL_REQUIREMENT|CAPITAL_REQUIREMENT_RANGE|CAPITAL_REQUIREMENT_PLUS|LIQUIDITY_THRESHOLD)\}\}/g;
 
 /**
  * Resolves a single token to its display value
@@ -81,6 +82,9 @@ export function resolveToken(
   const roundedAsk = roundToNearest(askPrice, roundingIncrement);
 
   switch (tokenType) {
+    case "BAR_PRICE":
+      return formatPrice(roundedAsk, ""); // No tilde prefix for BAR_PRICE
+
     case "CAPITAL_REQUIREMENT":
       return formatPrice(roundedAsk);
 

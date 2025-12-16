@@ -3,11 +3,12 @@ import { QAItem } from "@/components/QASection";
 /**
  * FAQ Content with Dynamic Price Tokens
  * 
- * Supported tokens (replaced at render time with live prices):
- * - {{CAPITAL_REQUIREMENT}}       -> "~$1,000" (ask price × 32.15 oz rounded to $50)
- * - {{CAPITAL_REQUIREMENT_RANGE}} -> "~$950–$1,100" (ask ± 5% band)
- * - {{CAPITAL_REQUIREMENT_PLUS}}  -> "~$1,000+" (ask rounded with plus)
- * - {{LIQUIDITY_THRESHOLD}}       -> "~$1,000+" (same as plus, for liquidity context)
+ * Supported tokens (replaced at render time with live kilo silver bar prices):
+ * - {{BAR_PRICE}}                 -> "$1,100" (ask price, no tilde)
+ * - {{CAPITAL_REQUIREMENT}}       -> "~$1,100" (ask price rounded)
+ * - {{CAPITAL_REQUIREMENT_RANGE}} -> "~$1,000–$1,200" (ask ± 5% band)
+ * - {{CAPITAL_REQUIREMENT_PLUS}}  -> "~$1,100+" (ask price with plus)
+ * - {{LIQUIDITY_THRESHOLD}}       -> "~$1,100+" (same as plus, for liquidity context)
  */
 
 export const homeQA: QAItem[] = [
