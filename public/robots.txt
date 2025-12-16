@@ -1,6 +1,6 @@
-# https://www.1000ozsilverbars.com robots.txt
+# https://www.kilosilverbars.com robots.txt
 
 User-agent: *
 Allow: /
 
-Sitemap: https://www.1000ozsilverbars.com/sitemap.xml
+Sitemap: https://www.kilosilverbars.com/sitemap.xml

@@ -65,36 +65,6 @@ export default async function PricesPage() {
     },
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "What determines the price of a kilo silver bar?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "The price of a kilo silver bar consists of the spot price of silver multiplied by 32.15 troy ounces, plus a premium that covers refining, distribution, and dealer margins. Kilo bar premiums typically range from 3-6% over spot, offering competitive value compared to smaller bars.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Why do kilo silver bars have lower premiums than smaller bars?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Kilo bars have lower premiums because manufacturing costs are spread across more silver content. Producing one kilo bar is more efficient than producing 32 individual 1 oz bars. The per-ounce production cost decreases with bar size.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How often do silver prices change?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Silver prices change continuously during market hours as the precious metals market operates nearly 24 hours a day, five days a week. Major price movements are influenced by currency fluctuations, industrial demand, investment flows, and supply dynamics.",
-        },
-      },
-    ],
-  };
 
   const aiSummaryBullets = [
     "This page displays live silver prices via Monex data",
@@ -109,10 +79,6 @@ export default async function PricesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       {/* Hero Section */}

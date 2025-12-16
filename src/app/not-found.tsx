@@ -9,17 +9,17 @@ export default function NotFound() {
           Page Not Found
         </h1>
         <p className="text-gray-600 mb-8">
-          The page you&apos;re looking for doesn&apos;t exist or has been moved.
+          This page doesn&apos;t exist. Explore our kilo silver bar resources below.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/" className="btn-primary">
-            Return Home
+            Kilo Silver Bar Overview
           </Link>
           <Link href="/live-silver-prices" className="btn-secondary">
-            View Silver Prices
+            Live Silver Prices
           </Link>
           <Link href="/resources" className="btn-secondary">
-            Browse Resources
+            Educational Guides
           </Link>
         </div>
       </div>
