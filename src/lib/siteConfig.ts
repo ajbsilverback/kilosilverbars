@@ -66,22 +66,24 @@ export const SITE_CONFIG = {
 
   /** Approved Monex.com links for authoritative references */
   monexLinks: {
-    /** Silver bars product page */
-    productPage: "https://www.monex.com/silver/",
+    /** 1 kilo silver bars product page */
+    productPage: "https://www.monex.com/1-kilo-silver-bars-for-sale/",
     /** Silver spot prices */
     spotPrices: "https://www.monex.com/silver-prices/",
     /** Investing in silver overview */
     investingOverview: "https://www.monex.com/investing-in-silver/",
-    /** Silver price charts */
-    priceCharts: "https://www.monex.com/silver-prices/",
+    /** Kilo silver price charts */
+    priceCharts: "https://www.monex.com/1-kilo-silver-bullion-price-charts/",
     /** Silver knowledge base */
-    knowledgeBase: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/",
+    knowledgeBase: "https://www.monex.com/knowledge-base/silver-investing/",
+    /** Kilo bars knowledge base */
+    kiloBarsKB: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/silver-kilo-bars/",
     /** Educational articles */
     articles: {
-      bullionHistory: "https://www.monex.com/knowledge/great-bullion-famine-bullionism-and-bullionist-controversy/",
-      investingInSilver: "https://www.monex.com/investing-in-silver/",
-      silverBars: "https://www.monex.com/silver/",
-      storageAndCare: "https://www.monex.com/knowledge-base/silver-investing/",
+      cheapestKiloBars: "https://www.monex.com/knowledge/cheapest-kilo-silver-bars/",
+      investmentEconomics: "https://www.monex.com/knowledge/investment-economics-kilo-silver-bars/",
+      comparingKiloBars: "https://www.monex.com/knowledge/comparing-silver-kilo-bars/",
+      historicalOrigin: "https://www.monex.com/knowledge/historical-origin-metric-weight-kilo-silver/",
     },
   },
 } as const;

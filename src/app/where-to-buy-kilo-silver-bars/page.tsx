@@ -25,7 +25,7 @@ const onlineDealers = [
     name: "Monex",
     description:
       "A precious metals dealer providing live market data and various silver bar products, including kilo bars from recognized refiners.",
-    url: "https://www.monex.com/silver/",
+    url: "https://www.monex.com/1-kilo-silver-bars-for-sale/",
   },
   {
     name: "APMEX",

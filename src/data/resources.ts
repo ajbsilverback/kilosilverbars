@@ -19,8 +19,8 @@ export const resources: Resource[] = [
     excerpt:
       "Discover why kilo silver bars command competitive retail premiums and how to maximize your silver buying power.",
     category: "Pricing",
-    monexLink: "https://www.monex.com/investing-in-silver/",
-    monexAnchorText: "Monex analysis of silver bar investments",
+    monexLink: "https://www.monex.com/knowledge/cheapest-kilo-silver-bars/",
+    monexAnchorText: "Monex guide to kilo silver bar pricing",
   },
   {
     slug: "size-comparison",
@@ -30,8 +30,8 @@ export const resources: Resource[] = [
     excerpt:
       "Compare kilo, 10 oz, and 1 oz silver bars across premiums, liquidity, and practical considerations for investors.",
     category: "Investment",
-    monexLink: "https://www.monex.com/silver/",
-    monexAnchorText: "Monex comparison of silver bar options",
+    monexLink: "https://www.monex.com/knowledge/comparing-silver-kilo-bars/",
+    monexAnchorText: "Monex comparison of silver kilo bars",
   },
   {
     slug: "storage-options",
@@ -42,7 +42,7 @@ export const resources: Resource[] = [
       "A comprehensive guide to securing your kilo silver bar investment with appropriate storage solutions.",
     category: "Security",
     monexLink: "https://www.monex.com/knowledge-base/silver-investing/",
-    monexAnchorText: "Monex guide to silver storage and care",
+    monexAnchorText: "Monex guide to silver investing",
   },
   {
     slug: "brand-differences",
@@ -52,8 +52,8 @@ export const resources: Resource[] = [
     excerpt:
       "Learn the differences between PAMP, Valcambi, Heraeus, RCM, and other top kilo silver bar producers.",
     category: "Products",
-    monexLink: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/",
-    monexAnchorText: "Monex silver bar knowledge base",
+    monexLink: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/silver-kilo-bars/",
+    monexAnchorText: "Monex kilo silver bar guide",
   },
   {
     slug: "liquidity-considerations",
@@ -63,8 +63,8 @@ export const resources: Resource[] = [
     excerpt:
       "Explore the liquidity dynamics of kilo silver bars and strategies for efficient buying and selling.",
     category: "Investment",
-    monexLink: "https://www.monex.com/silver/",
-    monexAnchorText: "Monex silver bullion overview",
+    monexLink: "https://www.monex.com/1-kilo-silver-bars-for-sale/",
+    monexAnchorText: "Monex 1 kilo silver bars",
   },
   {
     slug: "market-dynamics",
@@ -74,8 +74,8 @@ export const resources: Resource[] = [
     excerpt:
       "Explore the key drivers behind silver price movements and what they mean for kilo bar investors.",
     category: "Market",
-    monexLink: "https://www.monex.com/silver-prices/",
-    monexAnchorText: "Monex silver price charts",
+    monexLink: "https://www.monex.com/1-kilo-silver-bullion-price-charts/",
+    monexAnchorText: "Monex kilo silver price charts",
   },
   {
     slug: "spreads-explained",
@@ -85,8 +85,8 @@ export const resources: Resource[] = [
     excerpt:
       "Master the concept of bid-ask spreads and learn how to get the best prices on your kilo bar trades.",
     category: "Pricing",
-    monexLink: "https://www.monex.com/silver/",
-    monexAnchorText: "Monex tips for silver bar purchasing",
+    monexLink: "https://www.monex.com/knowledge/investment-economics-kilo-silver-bars/",
+    monexAnchorText: "Monex kilo silver bar economics",
   },
   {
     slug: "authentication-guide",
@@ -96,8 +96,8 @@ export const resources: Resource[] = [
     excerpt:
       "Protect your investment with proper authentication knowledge and verification techniques.",
     category: "Security",
-    monexLink: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/",
-    monexAnchorText: "Monex silver bar reference guide",
+    monexLink: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/silver-kilo-bars/",
+    monexAnchorText: "Monex kilo silver bar reference",
   },
   {
     slug: "institutional-vs-retail",
@@ -108,7 +108,7 @@ export const resources: Resource[] = [
       "Learn how market structure affects kilo bar quality, pricing, and resale value for retail investors.",
     category: "Market",
     monexLink: "https://www.monex.com/investing-in-silver/",
-    monexAnchorText: "Monex overview of investing in silver",
+    monexAnchorText: "Monex guide to investing in silver",
   },
   {
     slug: "portfolio-allocation",
@@ -119,7 +119,7 @@ export const resources: Resource[] = [
       "Discover how kilo bars fit into portfolio diversification strategies for individual investors.",
     category: "Investment",
     monexLink: "https://www.monex.com/investing-in-silver/",
-    monexAnchorText: "Monex analysis of silver investment strategies",
+    monexAnchorText: "Monex silver investment strategies",
   },
   {
     slug: "first-time-buyers-guide",
@@ -129,8 +129,8 @@ export const resources: Resource[] = [
     excerpt:
       "Learn what to expect when purchasing your first kilo silver bar, from choosing a dealer to taking delivery.",
     category: "Buying Guide",
-    monexLink: "https://www.monex.com/silver/",
-    monexAnchorText: "Monex silver bullion products",
+    monexLink: "https://www.monex.com/1-kilo-silver-bars-for-sale/",
+    monexAnchorText: "Monex 1 kilo silver bars for sale",
   },
   {
     slug: "tax-considerations",
@@ -140,8 +140,8 @@ export const resources: Resource[] = [
     excerpt:
       "Understand the tax landscape for physical silver investments before making your purchase decision.",
     category: "Tax & Legal",
-    monexLink: "https://www.monex.com/investing-in-silver/",
-    monexAnchorText: "Monex silver investment resources",
+    monexLink: "https://www.monex.com/knowledge/historical-origin-metric-weight-kilo-silver/",
+    monexAnchorText: "Monex kilo silver bar history",
   },
 ];
 

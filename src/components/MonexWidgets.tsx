@@ -23,12 +23,12 @@ export function SilverPriceChart() {
         <div className="text-center py-8 text-gray-500">
           <p>Chart temporarily unavailable.</p>
           <a
-            href="https://www.monex.com/silver-prices/"
+            href="https://www.monex.com/1-kilo-silver-bullion-price-charts/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-navy-600 hover:underline text-sm"
           >
-            View silver prices at Monex →
+            View kilo silver price charts at Monex →
           </a>
         </div>
       </div>
@@ -46,7 +46,7 @@ export function SilverPriceChart() {
           <small className="text-gray-500">
             Prices provided by{" "}
             <a
-              href="https://www.monex.com/liveprices/"
+              href="https://www.monex.com/silver-prices/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-navy-600 hover:text-navy-700 hover:underline"
@@ -81,12 +81,12 @@ export function SilverPriceTable() {
         <div className="text-center py-8 text-gray-500">
           <p>Price table temporarily unavailable.</p>
           <a
-            href="https://www.monex.com/liveprices/"
+            href="https://www.monex.com/silver-prices/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-navy-600 hover:underline text-sm"
           >
-            View live prices at Monex →
+            View silver prices at Monex →
           </a>
         </div>
       </div>
@@ -104,7 +104,7 @@ export function SilverPriceTable() {
           <small className="text-gray-500">
             Prices provided by{" "}
             <a
-              href="https://www.monex.com/liveprices/"
+              href="https://www.monex.com/silver-prices/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-navy-600 hover:text-navy-700 hover:underline"

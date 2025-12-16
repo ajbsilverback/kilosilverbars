@@ -276,15 +276,15 @@ export default async function PricesPage() {
       <section className="py-10 md:py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-500 mb-6">
-            For detailed market analysis and silver pricing:
+            For detailed market analysis and kilo silver bar pricing:
           </p>
           <a
-            href="https://www.monex.com/silver-prices/"
+            href="https://www.monex.com/1-kilo-silver-bullion-price-charts/"
             target="_blank"
             rel="nofollow noopener"
             className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
           >
-            <span>Monex silver price charts</span>
+            <span>Monex kilo silver price charts</span>
             <svg
               className="w-4 h-4 ml-2"
               fill="none"

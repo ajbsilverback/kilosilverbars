@@ -126,7 +126,7 @@ export default async function LiveSilverSpotIndexCard() {
       <p className="text-xs text-gray-400 text-center pt-4 border-t border-silver-100">
         Data from{" "}
         <a
-          href="https://www.monex.com/liveprices/"
+          href="https://www.monex.com/silver-prices/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-navy-600 hover:text-navy-700 hover:underline"
