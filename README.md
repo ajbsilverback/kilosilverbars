@@ -1,22 +1,24 @@
-# 1KiloGoldBars.com
+# KiloSilverBars.com
 
-An educational microsite about 1 kilo gold bars built with Next.js 15, TypeScript, and Tailwind CSS.
+An educational microsite about kilo silver bars (1,000 grams / 32.15 troy ounces) built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- **Home Page**: Comprehensive overview of 1 kilo gold bars, including benefits, who buys them, key specifications, and size comparisons
-- **Prices Page**: Live gold pricing with GBX1K and GBXSPOT data, plus educational content about premiums
-- **Resources**: 10 in-depth educational articles covering:
+- **Home Page**: Comprehensive overview of kilo silver bars, including benefits, who buys them, key specifications, and size comparisons
+- **Prices Page**: Live silver pricing with spot data and kilo bar calculations, plus educational content about premiums
+- **Resources**: 12 in-depth educational articles covering:
   - Understanding Kilo Bar Premiums
   - Size Comparison (1 oz vs 10 oz vs Kilo)
-  - Storage Options for High-Value Bars
-  - Brand Differences (PAMP, Valcambi, Perth, Argor-Heraeus)
+  - Storage Options for Kilo Bars
+  - Brand Differences (PAMP, Valcambi, Heraeus, RCM, Perth Mint)
   - Liquidity Considerations
   - Market Dynamics
   - Bid-Ask Spreads
   - Authentication Guide
-  - Institutional vs Retail Markets
+  - Wholesale vs Retail Markets
   - Portfolio Allocation
+  - First-Time Buyers Guide
+  - Tax Considerations
 - **Where to Buy**: Independent dealer guide with multiple sources and neutrality disclaimer
 - **About**: Site mission and editorial independence
 
@@ -50,11 +52,11 @@ src/
 ├── app/
 │   ├── layout.tsx          # Root layout with header/footer
 │   ├── page.tsx            # Home page
-│   ├── prices/
-│   │   └── page.tsx        # Gold prices page
+│   ├── live-silver-prices/
+│   │   └── page.tsx        # Silver prices page
 │   ├── about/
 │   │   └── page.tsx        # About page
-│   ├── where-to-buy/
+│   ├── where-to-buy-kilo-silver-bars/
 │   │   └── page.tsx        # Buying guide
 │   └── resources/
 │       ├── page.tsx        # Resources index
@@ -63,8 +65,8 @@ src/
 ├── components/
 │   ├── Header.tsx
 │   ├── Footer.tsx
-│   ├── LiveGbozSpotCard.tsx    # Kilo bar price card
-│   ├── LiveGoldSpotIndexCard.tsx # Spot index card
+│   ├── LiveGbozSpotCard.tsx        # Kilo bar price card
+│   ├── LiveSilverSpotIndexCard.tsx # Spot index card
 │   └── MonexWidgets.tsx
 ├── lib/
 │   ├── siteConfig.ts       # ⭐ SINGLE SOURCE OF TRUTH
@@ -79,18 +81,18 @@ src/
 
 This site uses the Monex API for pricing data:
 
-- **Product Symbol**: GBX1K (1 kilo gold bar)
-- **Spot Symbol**: GBXSPOT (Gold spot index)
+- **Product Symbol**: SBK (1 Kilo Silver Bar)
+- **Spot Symbol**: SBSPOT (Silver spot price per troy ounce)
 
 API endpoints:
-- `https://api.monex.com/api/v2/Metals/spot/summary?metals=GBX1K`
-- `https://api.monex.com/api/v2/Metals/spot/summary?metals=GBXSPOT`
+- `https://api.monex.com/api/v2/Metals/spot/summary?metals=SBK`
+- `https://api.monex.com/api/v2/Metals/spot/summary?metals=SBSPOT`
 
 Prices are fetched once per page load (no polling/intervals).
 
 ## SEO Features
 
-- Schema.org markup on all pages (WebPage, Product, Article, FAQPage)
+- Schema.org markup on all pages (WebPage, Article, FAQPage)
 - OpenGraph and Twitter meta tags
 - Semantic HTML structure
 - Canonical URLs

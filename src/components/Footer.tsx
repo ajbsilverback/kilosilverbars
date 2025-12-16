@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-lg bg-navy-700 flex items-center justify-center border border-navy-600">
-                <span className="text-white font-bold text-xs">1000</span>
+                <span className="text-white font-bold text-xs">1kg</span>
               </div>
               <span className="text-xl font-display font-semibold text-navy-700">
                 {SITE_CONFIG.brandName}
@@ -20,8 +20,8 @@ export default function Footer() {
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed">
               Your trusted educational resource for {SITE_CONFIG.primaryProduct}. 
-              Helping serious investors understand 1000 troy ounce COMEX good delivery 
-              silver bars with the lowest premiums per ounce.
+              Helping investors understand 1 kilogram (1,000 gram) silver bullion 
+              bars with competitive premiums and accessible entry points.
             </p>
           </div>
 
@@ -70,10 +70,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/where-to-buy-1000-oz-silver-bars"
+                  href="/where-to-buy-kilo-silver-bars"
                   className="text-gray-600 hover:text-navy-700 transition-colors text-sm"
                 >
-                  Where to Buy 1000 oz Silver Bars
+                  Where to Buy Kilo Silver Bars
                 </Link>
               </li>
               <li>

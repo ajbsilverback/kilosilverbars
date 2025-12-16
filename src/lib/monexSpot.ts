@@ -10,16 +10,16 @@ import { SITE_CONFIG, getProductApiUrl, getSpotApiUrl } from "./siteConfig";
  * 
  * API Response shape (data[0]):
  * {
- *   "symbol": "GBOZ",
+ *   "symbol": "SBK",
  *   "baseCurrency": "USD",
- *   "last": 4371.0,
- *   "bid": 4211.0,
- *   "ask": 4371.0,
- *   "high": 4444.0,
- *   "low": 4351.0,
- *   "open": 4430.0,
- *   "previousClose": 4369.0,
- *   "timestamp": "2025-12-12 17:18:12Z"
+ *   "last": 1050.0,
+ *   "bid": 1040.0,
+ *   "ask": 1050.0,
+ *   "high": 1060.0,
+ *   "low": 1035.0,
+ *   "open": 1045.0,
+ *   "previousClose": 1042.0,
+ *   "timestamp": "2025-12-16 12:00:00Z"
  * }
  */
 export interface ProductSpotSummary {

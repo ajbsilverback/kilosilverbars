@@ -6,7 +6,7 @@ type LiveGbozSpotCardProps = {
 };
 
 /**
- * Server Component - Fetches 1000 oz silver bar price ONCE per page load
+ * Server Component - Fetches kilo silver bar price ONCE per page load
  * 
  * ABSOLUTELY NO setInterval, useEffect, or client-side polling.
  * This renders ONCE per page load and never refreshes again.
@@ -33,7 +33,7 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
       {/* Header with live indicator */}
       <div className="flex items-center justify-between">
         <h2 className="text-xl sm:text-2xl font-display font-semibold text-gray-900">
-          Live 1000 oz Silver Bar Price
+          Live Kilo Silver Bar Price
         </h2>
         <div className="flex items-center gap-2">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
@@ -51,7 +51,7 @@ export default async function LiveGbozSpotCard({ showCta = true }: LiveGbozSpotC
           <p className="text-5xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-navy-700">
             {formatUSD(data.ask)}
           </p>
-          <p className="text-lg text-gray-500 mt-2">per 1000 oz bar</p>
+          <p className="text-lg text-gray-500 mt-2">per kilo bar</p>
         </div>
       </div>
 

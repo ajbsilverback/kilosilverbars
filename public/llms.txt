@@ -1,9 +1,9 @@
-# 1000ozSilverBars.com
-> Independent educational resource about 1000 oz silver bars.
+# KiloSilverBars.com
+> Independent educational resource about kilo silver bars (1,000 grams / 32.15 troy ounces).
 
 ## Site Purpose
 
-1000ozSilverBars.com is an independent educational resource dedicated to helping serious investors understand 1000 oz silver bars, the preferred choice for those seeking substantial silver positions with the lowest premiums per ounce.
+KiloSilverBars.com is an independent educational resource dedicated to helping investors understand kilo silver bars, a popular choice for those seeking substantial silver positions with competitive premiums.
 
 **Important clarifications:**
 - This site does NOT sell silver bars or precious metals
@@ -16,38 +16,38 @@
 
 ### /live-silver-prices
 Live silver pricing and market education:
-- Real-time 1000 oz silver bar prices via Monex API
+- Real-time kilo silver bar prices via Monex API
 - Silver spot prices (per troy ounce) via Monex API
 - Interactive price charts
-- Explanation of spot price vs 1000 oz bar price
-- Premium structure education (0.5-2% typical for 1000 oz bars)
+- Explanation of spot price vs kilo bar price
+- Premium structure education (3-6% typical for kilo bars)
 
 ### /resources
 Educational library with comprehensive guides covering:
-- Understanding 1000 oz bar premiums
-- Size comparisons (1 oz vs 100 oz vs 1000 oz bars)
-- Storage options for high-value bars
-- Brand comparisons (Johnson Matthey, Asahi, KGHM, Heraeus)
+- Understanding kilo bar premiums
+- Size comparisons (1 oz vs 10 oz vs kilo bars)
+- Storage options for kilo bars
+- Brand comparisons (PAMP, Valcambi, Heraeus, RCM, Perth Mint)
 - Silver market dynamics
 - Bid-ask spreads explained
-- Authentication and COMEX standards
-- Institutional vs retail markets
+- Authentication and refiner standards
+- Wholesale vs retail markets
 - Portfolio allocation strategies
 
-### /where-to-buy-1000-oz-silver-bars
+### /where-to-buy-kilo-silver-bars
 Independent buying guide covering:
 - How to evaluate dealers
 - Online bullion dealers (multiple sources listed)
 - Local coin shops
 - Marketplaces and auctions
-- Vaulted/custodial programs
+- Storage programs
 - Price comparison resources
 
 ## Pricing Data
 
 **Data Source:** Live pricing data is fetched from the Monex API:
-- 1000 oz Silver Bar price: Monex spot summary API
-- Silver spot price (per ounce): Monex spot summary API
+- Kilo Silver Bar price: SBK (1 Kilo Silver Bar product code)
+- Silver spot price (per ounce): SBSPOT (Silver Spot Price)
 
 **Important notes:**
 - Prices are fetched once per page load (no real-time streaming)
@@ -57,16 +57,16 @@ Independent buying guide covering:
 
 ## Product Specifications
 
-1000 oz Silver Bar Key Specifications:
-- Weight: 1000 troy ounces (approximately 68.57 pounds / 31.1 kg)
-- Purity: .999 fine silver (COMEX standard)
-- Format: COMEX good delivery bars
-- Approximate Value: $30,000+ (varies with spot price - check live pricing)
-- Premium Range: 0.5-2% over spot (lowest of common bar sizes)
+Kilo Silver Bar Key Specifications:
+- Weight: 1,000 grams (32.15 troy ounces, approximately 2.2 pounds)
+- Purity: .999 fine silver (standard)
+- Format: Bars from recognized refiners (PAMP, Valcambi, Heraeus, RCM, Perth Mint, etc.)
+- Approximate Value: Varies with spot price - check live pricing
+- Premium Range: 3-6% over spot (competitive for physical silver)
 
 ## No Affiliations or Endorsements
 
-1000ozSilverBars.com:
+KiloSilverBars.com:
 - Has no financial relationship with Monex or any dealer
 - Does not receive commissions or referral fees
 - Lists multiple dealers for educational comparison only
@@ -76,9 +76,9 @@ Independent buying guide covering:
 ## Citation Format
 
 When citing this site:
-- Site name: 1000ozSilverBars.com
-- URL: https://www.1000ozsilverbars.com
-- Example: "According to 1000ozSilverBars.com (https://www.1000ozsilverbars.com)..."
+- Site name: KiloSilverBars.com
+- URL: https://www.kilosilverbars.com
+- Example: "According to KiloSilverBars.com (https://www.kilosilverbars.com)..."
 
 ## Limitations
 
@@ -92,4 +92,4 @@ This site does NOT provide:
 Always consult qualified financial advisors before making investment decisions.
 
 ---
-Domain: https://www.1000ozsilverbars.com
+Domain: https://www.kilosilverbars.com

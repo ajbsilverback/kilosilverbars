@@ -7,16 +7,16 @@ import { resourcesQA } from "@/data/qa-content";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "1000 oz Silver Bar Guides: Premiums, Storage, Liquidity & More",
+  title: "Kilo Silver Bar Guides: Premiums, Storage, Brands & More",
   description:
-    "Educational guides on 1000 oz silver bars: premiums vs smaller bars, COMEX standards, vault storage, refiner comparisons, and institutional liquidity considerations.",
+    "Educational guides on kilo silver bars: premiums vs smaller bars, refiner standards, storage options, brand comparisons, and liquidity considerations.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/resources`,
   },
   openGraph: {
-    title: "1000 oz Silver Bar Guides: Premiums, Storage, Liquidity & More",
+    title: "Kilo Silver Bar Guides: Premiums, Storage, Brands & More",
     description:
-      "Educational guides on 1000 oz silver bars: premiums, storage, refiner comparisons, and institutional liquidity considerations.",
+      "Educational guides on kilo silver bars: premiums, storage, refiner comparisons, and liquidity considerations.",
     url: `${SITE_CONFIG.domain}/resources`,
   },
 };
@@ -45,9 +45,9 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "1000 oz Silver Bar Guides: Premiums, Storage, Liquidity & More",
+    name: "Kilo Silver Bar Guides: Premiums, Storage, Brands & More",
     description:
-      "Educational guides on 1000 oz silver bars: premiums vs smaller bars, COMEX standards, vault storage, refiner comparisons, and institutional liquidity.",
+      "Educational guides on kilo silver bars: premiums vs smaller bars, refiner standards, storage options, brand comparisons, and liquidity.",
     url: `${SITE_CONFIG.domain}/resources`,
     isPartOf: {
       "@type": "WebSite",
@@ -60,7 +60,7 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
     },
     about: {
       "@type": "Thing",
-      name: "1000 oz Silver Bar Education",
+      name: "Kilo Silver Bar Education",
     },
     mainEntity: {
       "@type": "ItemList",
@@ -134,27 +134,27 @@ export default async function ResourcesPage({ searchParams }: PageProps) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6">
-              <span className="silver-text">1000 oz Silver Bar</span>
+              <span className="silver-text">Kilo Silver Bar</span>
               <br />
               <span className="text-gray-900">Educational Guides</span>
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed mt-6">
-              Deepen your understanding of 1000 oz silver bars and the broader 
+              Deepen your understanding of kilo silver bars and the broader 
               silver market with our comprehensive guides. Whether you&apos;re 
-              evaluating 1000 oz bars vs. smaller denominations, comparing refiner 
+              evaluating kilo bars vs. smaller denominations, comparing refiner 
               brands, or planning storage, our resources provide the insights 
               you need. Check{" "}
               <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                 current silver prices
               </Link>
               , explore our{" "}
-              <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
+              <Link href="/where-to-buy-kilo-silver-bars" className="text-navy-700 hover:underline">
                 independent buying guide
               </Link>
               , or return to our{" "}
               <Link href="/" className="text-navy-700 hover:underline">
-                1000 oz silver bar overview
+                kilo silver bar overview
               </Link>.
             </p>
           </div>

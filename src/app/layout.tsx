@@ -11,7 +11,7 @@ const websiteSchema = {
   name: SITE_CONFIG.brandName,
   url: SITE_CONFIG.domain,
   description:
-    "Independent educational resource about 1000 oz silver bars, covering premiums, storage, COMEX standards, and institutional liquidity for serious precious metals investors.",
+    "Independent educational resource about kilo silver bars (1,000 grams), covering premiums, storage, refiner standards, and practical considerations for precious metals investors.",
   publisher: {
     "@type": "Organization",
     "@id": `${SITE_CONFIG.domain}/#organization`,
@@ -34,12 +34,12 @@ const organizationSchema = {
   url: SITE_CONFIG.domain,
   logo: `${SITE_CONFIG.domain}/og-image.jpg`,
   description:
-    "Independent educational publisher providing comprehensive guides on 1000 oz silver bars for investors. We do not sell precious metals or provide financial advice.",
+    "Independent educational publisher providing comprehensive guides on kilo silver bars for investors. We do not sell precious metals or provide financial advice.",
   sameAs: [],
   foundingDate: "2024",
   knowsAbout: [
-    "1000 oz silver bars",
-    "COMEX good delivery silver",
+    "Kilo silver bars",
+    "1 kilogram silver bullion",
     "Silver bullion investing",
     "Precious metals storage",
     "Silver spot prices",
@@ -58,18 +58,18 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_CONFIG.brandName}`,
   },
   description:
-    "Discover everything about 1000 oz silver bars, the preferred choice for serious investors seeking substantial silver positions with the lowest premiums per ounce. Expert insights on COMEX good delivery silver bars.",
+    "Discover everything about kilo silver bars (1,000 grams), a popular choice for investors seeking substantial silver positions with competitive premiums. Expert insights on silver bullion bars.",
   keywords: [
-    "1000 oz silver bars",
-    "1000 ounce silver bars",
-    "COMEX silver bars",
-    "good delivery silver bars",
+    "kilo silver bars",
+    "1 kilo silver bars",
+    "kilogram silver bars",
+    "1000 gram silver bars",
     "silver bullion bars",
-    "buy 1000 oz silver bars",
+    "buy kilo silver bars",
     "silver investment",
     "silver bar prices",
-    "institutional silver",
-    "bulk silver bars",
+    "silver bullion",
+    "kilo silver bar premiums",
     "silver bar storage",
   ],
   authors: [{ name: SITE_CONFIG.brandName }],
@@ -82,13 +82,13 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.brandName,
     title: `${SITE_CONFIG.brandName} | ${SITE_CONFIG.primaryProduct} Insights & Education`,
     description:
-      "Discover everything about 1000 oz silver bars, the preferred choice for serious investors seeking substantial silver positions with the lowest premiums per ounce.",
+      "Discover everything about kilo silver bars (1,000 grams), a popular choice for investors seeking substantial silver positions with competitive premiums.",
     images: [
       {
         url: `${SITE_CONFIG.domain}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "1000 oz Silver Bars - Investment Education",
+        alt: "Kilo Silver Bars - Investment Education",
       },
     ],
   },
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.brandName} | ${SITE_CONFIG.primaryProduct} Insights & Education`,
     description:
-      "Discover everything about 1000 oz silver bars, the preferred choice for serious investors seeking substantial silver positions with the lowest premiums per ounce.",
+      "Discover everything about kilo silver bars (1,000 grams), a popular choice for investors seeking substantial silver positions with competitive premiums.",
   },
   robots: {
     index: true,

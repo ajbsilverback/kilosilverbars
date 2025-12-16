@@ -6,7 +6,7 @@ interface CapitalRequirementsCardProps {
 }
 
 /**
- * Server Component - Displays the approximate capital required to purchase a 1000 oz silver bar.
+ * Server Component - Displays the approximate capital required to purchase a kilo silver bar.
  * 
  * Can receive pre-fetched price data or will fetch its own if not provided.
  * NO polling, NO intervals - renders ONCE per page load only.
@@ -36,8 +36,8 @@ export default async function CapitalRequirementsCard({ priceData }: CapitalRequ
       </h3>
       <p className="text-gray-600 text-sm text-center mb-6">
         {hasValidPrice
-          ? "Based on current 1000 oz silver bar ask price:"
-          : "To purchase a single 1000 oz silver bar:"}
+          ? "Based on current kilo silver bar ask price:"
+          : "To purchase a single kilo silver bar:"}
       </p>
       <div className="text-center py-6 rounded-lg bg-navy-50 border border-navy-100">
         {hasValidPrice ? (
@@ -45,7 +45,7 @@ export default async function CapitalRequirementsCard({ priceData }: CapitalRequ
             <span className="text-4xl font-display font-bold text-navy-700">
               ≈ {roundToHundred(data.ask)}
             </span>
-            <p className="text-gray-500 text-sm mt-2">per 1000 oz bar</p>
+            <p className="text-gray-500 text-sm mt-2">per kilo bar</p>
           </>
         ) : (
           <>

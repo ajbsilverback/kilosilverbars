@@ -3,16 +3,16 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "About Us: Independent 1000 oz Silver Bar Education",
+  title: "About Us: Independent Kilo Silver Bar Education",
   description:
-    "1000ozSilverBars.com is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments. Learn about our editorial standards.",
+    "Kilo Silver Bars is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments. Learn about our editorial standards.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/about`,
   },
   openGraph: {
-    title: "About Us: Independent 1000 oz Silver Bar Education",
+    title: "About Us: Independent Kilo Silver Bar Education",
     description:
-      "1000ozSilverBars.com is an independent educational resource about 1000 oz silver bars. We do not sell silver or provide financial advice.",
+      "Kilo Silver Bars is an independent educational resource about kilo silver bars. We do not sell silver or provide financial advice.",
     url: `${SITE_CONFIG.domain}/about`,
   },
 };
@@ -21,9 +21,9 @@ export default function AboutPage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
-    name: "About Us: Independent 1000 oz Silver Bar Education",
+    name: "About Us: Independent Kilo Silver Bar Education",
     description:
-      "1000ozSilverBars.com is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments.",
+      "Kilo Silver Bars is an independent educational resource. We do not sell silver, provide financial advice, or accept dealer payments.",
     url: `${SITE_CONFIG.domain}/about`,
     isPartOf: {
       "@type": "WebSite",
@@ -55,7 +55,7 @@ export default function AboutPage() {
               About <span className="silver-text">{SITE_CONFIG.brandName}</span>
             </h1>
             <p className="text-xl text-gray-600">
-              An independent educational resource for serious silver investors
+              An independent educational resource for silver investors
             </p>
           </div>
 
@@ -68,18 +68,18 @@ export default function AboutPage() {
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
                 {SITE_CONFIG.brandName} is an independent educational website
-                dedicated to helping serious investors understand{" "}
+                dedicated to helping investors understand{" "}
                 <Link href="/" className="text-navy-700 hover:underline">
                   {SITE_CONFIG.primaryProduct}
-                </Link>, the preferred choice for those 
-                seeking substantial silver positions with the{" "}
+                </Link>, a popular choice for those 
+                seeking substantial silver positions with{" "}
                 <Link href="/resources/premiums-explained" className="text-navy-700 hover:underline">
-                  lowest premiums per ounce
+                  competitive premiums
                 </Link>.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Our mission is to provide clear, unbiased information about 
-                1000 oz bar investing, including{" "}
+                kilo bar investing, including{" "}
                 <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                   pricing mechanics
                 </Link>,{" "}
@@ -144,21 +144,22 @@ export default function AboutPage() {
                 <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                   prices page
                 </Link>{" "}
-                are fetched from the Monex API. We display two price feeds:
+                are fetched from the Monex API. We display silver spot prices 
+                which can be used to calculate approximate kilo bar values.
               </p>
               <ul className="space-y-2 text-gray-600 mb-4">
                 <li className="flex items-start gap-3">
                   <span className="text-navy-600">•</span>
                   <span>
-                    <strong className="text-gray-900">1000 oz Silver Bar price</strong> (current
-                    ask price for a 1000 oz silver bar)
+                    <strong className="text-gray-900">Silver spot price</strong> (raw
+                    spot price per troy ounce)
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-navy-600">•</span>
                   <span>
-                    <strong className="text-gray-900">Silver spot price</strong> (raw
-                    spot price per troy ounce)
+                    <strong className="text-gray-900">Kilo bar calculation</strong> (spot × 32.15 oz 
+                    plus typical premium)
                   </span>
                 </li>
               </ul>
@@ -246,7 +247,7 @@ export default function AboutPage() {
               <Link href="/live-silver-prices" className="btn-secondary">
                 View Silver Prices
               </Link>
-              <Link href="/where-to-buy-1000-oz-silver-bars" className="btn-secondary">
+              <Link href="/where-to-buy-kilo-silver-bars" className="btn-secondary">
                 Where to Buy
               </Link>
               <Link href="/resources" className="btn-secondary">

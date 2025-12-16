@@ -60,77 +60,77 @@ function replacePriceTokens(text: string, barPrice: string): string {
 function generateAISummaryBullets(slug: string, title: string): string[] {
   const summaryMap: Record<string, string[]> = {
     "premiums-explained": [
-      "This article explains why 1000 oz silver bars have the lowest retail premiums",
-      "Learn how premiums of 0.5-2% compare to smaller bar sizes",
-      "Understand the manufacturing economics that drive 1000 oz bar efficiency",
+      "This article explains why kilo silver bars have competitive retail premiums",
+      "Learn how premiums of 3-6% compare to smaller bar sizes",
+      "Understand the manufacturing economics that drive kilo bar efficiency",
       "Discover strategies to maximize premium savings when purchasing",
       "Compare total cost of ownership across different silver bar formats",
     ],
     "size-comparison": [
-      "This article compares 1 oz, 100 oz, and 1000 oz silver bars in detail",
+      "This article compares 1 oz, 10 oz, and kilo silver bars in detail",
       "Learn the premium differences across bar size denominations",
       "Understand trade-offs between cost efficiency and liquidity by size",
       "Discover which bar size best fits different investment goals and capital levels",
       "Get guidance on building a mixed-size silver bar portfolio",
     ],
     "storage-options": [
-      "This article covers storage solutions for high-value 1000 oz silver bars",
-      "Learn about professional vault storage and allocated programs",
-      "Understand bank safe deposit box advantages and limitations",
-      "Discover home storage requirements for substantial silver holdings",
-      "Get guidance on insurance and security considerations",
+      "This article covers storage solutions for kilo silver bars",
+      "Learn about home storage options for the manageable kilo format",
+      "Understand professional vault storage for larger collections",
+      "Discover security considerations for kilo bar holdings",
+      "Get guidance on insurance and documentation",
     ],
     "brand-differences": [
-      "This article compares major 1000 oz silver bar manufacturers",
-      "Learn about Johnson Matthey, Asahi, KGHM, and other COMEX refiners",
-      "Understand the importance of COMEX/LBMA accreditation for 1000 oz bars",
+      "This article compares major kilo silver bar manufacturers",
+      "Learn about PAMP, Valcambi, Heraeus, Royal Canadian Mint, and other refiners",
+      "Understand the importance of refiner accreditation for kilo bars",
       "Discover security features and authentication methods by brand",
       "Compare how brand choice affects premiums and resale value",
     ],
     "liquidity-considerations": [
-      "This article explains liquidity dynamics for 1000 oz silver bars",
-      "Learn how 1000 oz bar liquidity compares to smaller denominations",
-      "Understand the partial liquidation challenge with large bars",
+      "This article explains liquidity dynamics for kilo silver bars",
+      "Learn how kilo bar liquidity compares to smaller denominations",
+      "Understand the partial liquidation challenge with larger bars",
       "Discover strategies for efficient buying and selling",
       "Get guidance on documentation for smooth resale transactions",
     ],
     "market-dynamics": [
       "This article explains the forces that move silver prices",
       "Learn how industrial demand, investment flows, and dollar strength affect values",
-      "Understand the role of COMEX futures in price discovery",
+      "Understand the role of commodity markets in price discovery",
       "Discover how mine production and recycling influence the silver market",
       "Get context for interpreting silver price movements",
     ],
     "spreads-explained": [
-      "This article explains bid-ask spreads on 1000 oz silver bars",
-      "Learn why 1000 oz bars have tighter spreads than smaller bars",
+      "This article explains bid-ask spreads on kilo silver bars",
+      "Learn why kilo bars have competitive spreads compared to smaller bars",
       "Understand how spreads affect your total cost of ownership",
       "Discover strategies to minimize spread impact on returns",
       "Calculate your break-even point including spread costs",
     ],
     "authentication-guide": [
-      "This article covers authentication for high-value 1000 oz silver bars",
-      "Learn about security features on modern COMEX-accredited bars",
+      "This article covers authentication for kilo silver bars",
+      "Learn about security features on modern refiner bars",
       "Understand professional testing methods like XRF analysis",
-      "Discover documentation requirements for legitimate 1000 oz bars",
+      "Discover documentation requirements for legitimate kilo bars",
       "Get guidance on avoiding counterfeits and red flags",
     ],
     "institutional-vs-retail": [
-      "This article explains the institutional silver market for 1000 oz bars",
-      "Learn about COMEX accreditation and quality standards",
-      "Understand how institutional infrastructure benefits retail investors",
-      "Discover pricing differences between institutional and retail markets",
-      "Get insights on leveraging institutional markets as a retail buyer",
+      "This article explains the silver market structure for kilo bars",
+      "Learn about refiner accreditation and quality standards",
+      "Understand how market infrastructure benefits retail investors",
+      "Discover pricing differences between wholesale and retail markets",
+      "Get insights on leveraging market efficiency as a retail buyer",
     ],
     "portfolio-allocation": [
-      "This article covers strategic allocation to 1000 oz silver bars",
-      "Learn when 1000 oz bars become appropriate for your portfolio",
+      "This article covers strategic allocation to kilo silver bars",
+      "Learn when kilo bars become appropriate for your portfolio",
       "Understand silver's role in portfolio diversification",
       "Discover mixed-size strategies for balancing efficiency and flexibility",
       "Get guidance on physical silver vs other silver investments",
     ],
     "first-time-buyers-guide": [
-      "This article guides first-time buyers through the 1000 oz bar purchase process",
+      "This article guides first-time buyers through the kilo bar purchase process",
       "Learn how to evaluate and select reputable dealers",
       "Understand payment methods, settlement timelines, and delivery logistics",
       "Discover why dealer pricing varies and how to compare options",
@@ -147,7 +147,7 @@ function generateAISummaryBullets(slug: string, title: string): string[] {
 
   return summaryMap[slug] || [
     `This article provides comprehensive coverage of ${title.toLowerCase()}`,
-    "Learn key concepts and practical considerations for 1000 oz silver bar investors",
+    "Learn key concepts and practical considerations for kilo silver bar investors",
     "Understand how this topic affects your silver investment strategy",
     "Get actionable guidance based on industry best practices",
     "Find answers to common questions in this area",
@@ -169,8 +169,8 @@ export default async function ResourcePage({ params }: Props) {
   // Fetch price data for dynamic FAQ tokens and article content
   const priceData = await fetchProductSpot();
   const formattedBarPrice = priceData 
-    ? `$${Math.round(priceData.ask).toLocaleString("en-US")}` 
-    : "$30,000";
+    ? `$${Math.round(priceData.ask * SITE_CONFIG.troyOunces).toLocaleString("en-US")}` 
+    : "$1,000";
 
   const articleSchema = {
     "@context": "https://schema.org",
@@ -201,7 +201,7 @@ export default async function ResourcePage({ params }: Props) {
     articleSection: resource.category,
     about: {
       "@type": "Thing",
-      name: "1000 oz Silver Bars",
+      name: "Kilo Silver Bars",
     },
     educationalLevel: "Intermediate",
     learningResourceType: "Guide",
@@ -324,14 +324,14 @@ export default async function ResourcePage({ params }: Props) {
           {/* Internal Links */}
           <div className="mt-10 p-5 md:p-6 rounded-xl bg-gray-50 border border-silver-200">
             <p className="text-gray-600 mb-3 text-sm md:text-base">
-              Continue learning about 1000 oz silver bars:
+              Continue learning about kilo silver bars:
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4">
               <Link
                 href="/"
                 className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
-                <span>1000 oz silver bar overview</span>
+                <span>Kilo silver bar overview</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -346,10 +346,10 @@ export default async function ResourcePage({ params }: Props) {
                 </svg>
               </Link>
               <Link
-                href="/where-to-buy-1000-oz-silver-bars"
+                href="/where-to-buy-kilo-silver-bars"
                 className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
               >
-                <span>Where to buy 1000 oz bars</span>
+                <span>Where to buy kilo bars</span>
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -409,7 +409,7 @@ export default async function ResourcePage({ params }: Props) {
             <p className="text-gray-600 mb-6 max-w-xl mx-auto text-sm md:text-base">
               Explore more{" "}
               <Link href="/resources" className="text-navy-700 hover:underline">
-                resources about 1000 oz silver bars
+                resources about kilo silver bars
               </Link>{" "}
               or check{" "}
               <Link href="/live-silver-prices" className="text-navy-700 hover:underline">

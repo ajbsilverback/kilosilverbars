@@ -4,17 +4,17 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "Where to Buy 1000 oz Silver Bars: Dealers, Vaults & Storage",
+  title: "Where to Buy Kilo Silver Bars: Dealers, Options & Storage",
   description:
-    "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces. No affiliate relationships.",
+    "Independent guide to buying kilo silver bars. Compare online dealers, local coin shops, storage programs, and marketplaces. No affiliate relationships.",
   alternates: {
-    canonical: `${SITE_CONFIG.canonicalDomain}/where-to-buy-1000-oz-silver-bars`,
+    canonical: `${SITE_CONFIG.canonicalDomain}/where-to-buy-kilo-silver-bars`,
   },
   openGraph: {
-    title: "Where to Buy 1000 oz Silver Bars: Dealers, Vaults & Storage",
+    title: "Where to Buy Kilo Silver Bars: Dealers, Options & Storage",
     description:
-      "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces.",
-    url: `${SITE_CONFIG.domain}/where-to-buy-1000-oz-silver-bars`,
+      "Independent guide to buying kilo silver bars. Compare online dealers, local coin shops, storage programs, and marketplaces.",
+    url: `${SITE_CONFIG.domain}/where-to-buy-kilo-silver-bars`,
   },
 };
 
@@ -24,19 +24,19 @@ const onlineDealers = [
   {
     name: "Monex",
     description:
-      "A precious metals dealer providing live market data and various silver bar products, including 1000 oz bars from recognized refiners.",
+      "A precious metals dealer providing live market data and various silver bar products, including kilo bars from recognized refiners.",
     url: "https://www.monex.com/silver/",
   },
   {
     name: "APMEX",
     description:
-      "A large online bullion retailer with a wide selection of silver bars from various mints and refiners worldwide, including COMEX-eligible 1000 oz bars.",
+      "A large online bullion retailer with a wide selection of silver bars from various mints and refiners worldwide, including kilo bars from top brands.",
     url: "https://www.apmex.com/silver/silver-bars",
   },
   {
     name: "Bullion Exchanges",
     description:
-      "A New York-based bullion dealer offering silver bars with multiple payment options and competitive pricing on large format bars.",
+      "A New York-based bullion dealer offering silver bars with multiple payment options and competitive pricing on kilo format bars.",
     url: "https://bullionexchanges.com/silver/silver-bars",
   },
   {
@@ -60,7 +60,7 @@ const onlineDealers = [
   {
     name: "JM Bullion",
     description:
-      "An established online precious metals dealer offering silver bars from major refiners in various sizes.",
+      "An established online precious metals dealer offering silver bars from major refiners including kilo bars.",
     url: "https://www.jmbullion.com/silver/silver-bars/",
   },
   {
@@ -72,7 +72,7 @@ const onlineDealers = [
   {
     name: "SD Bullion",
     description:
-      "An online dealer known for competitive pricing on bullion products, including silver bars from recognized refiners.",
+      "An online dealer known for competitive pricing on bullion products, including kilo silver bars from recognized refiners.",
     url: "https://sdbullion.com/silver/silver-bars",
   },
 ];
@@ -80,16 +80,16 @@ const onlineDealers = [
 export default async function WhereToBuyPage() {
   const priceData = await fetchProductSpot();
   const formattedPrice = priceData 
-    ? `$${Math.round(priceData.ask).toLocaleString("en-US")}` 
-    : "$30,000";
+    ? `$${Math.round(priceData.ask * SITE_CONFIG.troyOunces).toLocaleString("en-US")}` 
+    : "$1,000";
 
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Where to Buy 1000 oz Silver Bars: Dealers, Vaults & Storage",
+    name: "Where to Buy Kilo Silver Bars: Dealers, Options & Storage",
     description:
-      "Independent guide to buying 1000 oz silver bars. Compare online dealers, local coin shops, vault storage programs, and marketplaces. No affiliate relationships.",
-    url: `${SITE_CONFIG.domain}/where-to-buy-1000-oz-silver-bars`,
+      "Independent guide to buying kilo silver bars. Compare online dealers, local coin shops, storage programs, and marketplaces. No affiliate relationships.",
+    url: `${SITE_CONFIG.domain}/where-to-buy-kilo-silver-bars`,
     isPartOf: {
       "@type": "WebSite",
       url: SITE_CONFIG.domain,
@@ -101,7 +101,7 @@ export default async function WhereToBuyPage() {
     },
     about: {
       "@type": "Thing",
-      name: "Buying 1000 oz Silver Bars",
+      name: "Buying Kilo Silver Bars",
     },
     mainContentOfPage: {
       "@type": "WebPageElement",
@@ -112,34 +112,34 @@ export default async function WhereToBuyPage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Where to buy 1000 oz silver bars",
+    name: "Where to buy kilo silver bars",
     description:
-      "Types of vendors and platforms for purchasing 1000 oz silver bars",
+      "Types of vendors and platforms for purchasing kilo silver bars",
     numberOfItems: 4,
     itemListElement: [
       {
         "@type": "ListItem",
         position: 1,
         name: "Online Bullion Dealers",
-        description: "Major online dealers offering 1000 oz silver bars with competitive pricing and shipping",
+        description: "Major online dealers offering kilo silver bars with competitive pricing and shipping",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Local Coin Shops",
-        description: "Local dealers who may order or stock 1000 oz bars for in-person transactions",
+        description: "Local dealers who stock or can order kilo bars for in-person transactions",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Marketplaces & Auctions",
-        description: "Online marketplaces and auction houses offering 1000 oz silver bars",
+        description: "Online marketplaces and auction houses offering kilo silver bars",
       },
       {
         "@type": "ListItem",
         position: 4,
-        name: "Vaulted & Custodial Programs",
-        description: "Professional vault storage programs for allocated 1000 oz bar ownership",
+        name: "Storage Programs",
+        description: "Programs offering allocated kilo bar ownership with professional storage",
       },
     ],
   };
@@ -162,15 +162,15 @@ export default async function WhereToBuyPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
               <span className="silver-text">Where to Buy</span>
               <br />
-              <span className="text-gray-900">1000 oz Silver Bars</span>
+              <span className="text-gray-900">Kilo Silver Bars</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
               An independent educational guide to understanding your options
               for purchasing{" "}
               <Link href="/" className="text-navy-700 hover:underline">
-                1000 oz silver bars
+                kilo silver bars
               </Link>{" "}
-              (COMEX good delivery) from various sources.
+              (1,000 grams / 32.15 troy ounces) from various sources.
             </p>
             <div className="bg-navy-50 border border-navy-100 rounded-xl p-6 max-w-2xl mx-auto">
               <p className="text-gray-600 text-sm">
@@ -201,7 +201,7 @@ export default async function WhereToBuyPage() {
                 <p className="text-gray-600 text-sm">
                   Research dealer history, customer reviews, and industry
                   accreditations. Look for established businesses with
-                  transparent track records and LBMA/COMEX-accredited products.
+                  transparent track records and recognized refiner products.
                 </p>
               </div>
               <div className="card p-6">
@@ -220,8 +220,8 @@ export default async function WhereToBuyPage() {
                   <Link href="/live-silver-prices" className="text-navy-700 hover:underline">
                     spot price
                   </Link>{" "}
-                  across multiple dealers. 1000 oz bars typically have 0.5-2% premiums, significantly lower
-                  than smaller denominations.
+                  across multiple dealers. Kilo bars typically have 3-6% premiums, 
+                  better than smaller denominations.
                 </p>
               </div>
               <div className="card p-6">
@@ -233,8 +233,8 @@ export default async function WhereToBuyPage() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   Understand shipping costs, delivery times, and insurance
-                  coverage. For 1000 oz bars worth {formattedPrice}+, fully insured
-                  shipping and freight handling is essential.
+                  coverage. For kilo bars worth {formattedPrice}+, insured
+                  shipping is essential for peace of mind.
                 </p>
               </div>
               <div className="card p-6">
@@ -246,8 +246,8 @@ export default async function WhereToBuyPage() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   Check whether the dealer offers buyback programs and at what
-                  spread. 1000 oz bars from recognized refiners typically have
-                  excellent buyback liquidity in institutional markets.
+                  spread. Kilo bars from recognized refiners typically have
+                  good buyback liquidity.
                 </p>
               </div>
               <div className="card p-6">
@@ -255,10 +255,10 @@ export default async function WhereToBuyPage() {
                   <svg className="w-5 h-5 text-navy-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
-                  Storage & Security
+                  Storage Options
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Many dealers offer storage options for 1000 oz bars. Understand
+                  Some dealers offer storage options. Understand
                   whether storage is allocated (your specific bars) or
                   unallocated (pooled holdings).
                 </p>
@@ -271,8 +271,8 @@ export default async function WhereToBuyPage() {
                   Customer Support
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  For purchases of this magnitude, responsive customer service
-                  is critical. Evaluate accessibility and helpfulness before
+                  Responsive customer service matters, especially for 
+                  first-time buyers. Evaluate accessibility and helpfulness before
                   committing.
                 </p>
               </div>
@@ -334,22 +334,23 @@ export default async function WhereToBuyPage() {
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
               <p className="text-gray-700 mb-6">
-                Local coin shops and bullion dealers can sometimes handle 1000 oz bar
-                transactions, though inventory of these large bars is rare at retail locations:
+                Local coin shops and bullion dealers often stock kilo silver bars
+                or can order them. The kilo format is popular enough that many
+                shops carry them regularly:
               </p>
               <ul className="space-y-4 mb-6">
                 <li className="flex items-start gap-3">
                   <span className="text-navy-600 mt-1">•</span>
                   <span className="text-gray-600">
                     <strong className="text-gray-900">Face-to-face transactions:</strong>{" "}
-                    Build relationships and negotiate directly, especially valuable for large purchases.
+                    Build relationships and negotiate directly, with no shipping wait times.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-navy-600 mt-1">•</span>
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">Special orders:</strong>{" "}
-                    Many shops can order 1000 oz bars even if not in regular inventory.
+                    <strong className="text-gray-900">Ready availability:</strong>{" "}
+                    Kilo bars are popular enough that many shops keep them in stock.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -362,8 +363,8 @@ export default async function WhereToBuyPage() {
                 <li className="flex items-start gap-3">
                   <span className="text-navy-600 mt-1">•</span>
                   <span className="text-gray-600">
-                    <strong className="text-gray-900">Weight considerations:</strong>{" "}
-                    At 68-70 lbs, handling and transport require planning.
+                    <strong className="text-gray-900">Convenient size:</strong>{" "}
+                    At 2.2 lbs (1 kg), kilo bars are easy to transport from a local shop.
                   </span>
                 </li>
               </ul>
@@ -371,8 +372,8 @@ export default async function WhereToBuyPage() {
                 <p className="text-gray-500 text-sm">
                   <strong className="text-gray-700">Finding local dealers:</strong>{" "}
                   Search for &ldquo;coin shop near me&rdquo; or &ldquo;bullion dealer&rdquo;
-                  in your area. For 1000 oz bars, call ahead to confirm availability
-                  and pricing, as most shops don&apos;t stock these large bars.
+                  in your area. Call ahead to confirm kilo bar availability
+                  and pricing before visiting.
                 </p>
               </div>
             </div>
@@ -385,9 +386,8 @@ export default async function WhereToBuyPage() {
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
               <p className="text-gray-700 mb-6">
-                Online marketplaces and auction houses occasionally offer
-                1000 oz silver bars, though due diligence is especially important
-                for purchases of this value.
+                Online marketplaces and auction houses offer
+                kilo silver bars, though due diligence is important.
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -395,7 +395,7 @@ export default async function WhereToBuyPage() {
                     Potential Benefits
                   </h3>
                   <ul className="space-y-2 text-gray-600 text-sm">
-                    <li>• Access to rare or vintage bars</li>
+                    <li>• Access to variety of brands</li>
                     <li>• Competitive bidding may yield value</li>
                     <li>• Buyer protection programs available</li>
                     <li>• Selection from multiple sellers</li>
@@ -408,19 +408,19 @@ export default async function WhereToBuyPage() {
                   <ul className="space-y-2 text-gray-600 text-sm">
                     <li>• Counterfeit risk from unknown sellers</li>
                     <li>• Seller verification requires diligence</li>
-                    <li>• High-value transactions require caution</li>
                     <li>• Return policies vary significantly</li>
+                    <li>• Premiums may not be competitive</li>
                   </ul>
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://www.ebay.com/sch/i.html?_nkw=1000+oz+silver+bar"
+                  href="https://www.ebay.com/sch/i.html?_nkw=kilo+silver+bar"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                   className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors text-sm"
                 >
-                  <span>eBay 1000 oz silver bar search</span>
+                  <span>eBay kilo silver bar search</span>
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
@@ -440,35 +440,33 @@ export default async function WhereToBuyPage() {
             </div>
           </section>
 
-          {/* Vaulted & Custodial Programs */}
+          {/* Storage Options */}
           <section>
             <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-center text-gray-900">
-              <span className="silver-text">Vaulted</span> & Custodial Programs
+              <span className="silver-text">Storage</span> Options
             </h2>
             <div className="card p-8 max-w-3xl mx-auto">
               <p className="text-gray-700 mb-6">
-                For 1000 oz bars, many investors prefer professional{" "}
+                Kilo bars are practical for both home storage and professional{" "}
                 <Link href="/resources/storage-options" className="text-navy-700 hover:underline">
                   vault storage
-                </Link>{" "}
-                rather than taking physical delivery. Given the weight (68-70 lbs) and 
-                value, this approach provides institutional-grade security.
+                </Link>. 
+                At 2.2 pounds (1 kg), they&apos;re easily managed while representing 
+                meaningful value.
               </p>
               <div className="bg-navy-50 border border-navy-100 rounded-lg p-4 mb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Allocated vs. Unallocated Storage
+                  Home Storage Advantages
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  <strong className="text-gray-900">Allocated storage</strong> means
-                  your specific 1000 oz bars are segregated and identified as yours.{" "}
-                  <strong className="text-gray-900">Unallocated storage</strong> means
-                  you have a claim on a quantity of silver held in aggregate. For
-                  1000 oz bars, allocated storage is strongly recommended.
+                  Kilo bars are compact enough for most home safes while being 
+                  substantial enough to build meaningful positions. Many investors 
+                  successfully store multiple kilo bars at home with appropriate 
+                  security measures.
                 </p>
               </div>
               <p className="text-gray-600 text-sm mb-4">
-                Major vault and logistics providers serving the precious metals
-                industry include:
+                For larger collections, professional vault storage providers include:
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
@@ -599,3 +597,4 @@ export default async function WhereToBuyPage() {
     </>
   );
 }
+

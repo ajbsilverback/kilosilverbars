@@ -1,7 +1,7 @@
 /**
  * SITE CONFIGURATION - Single Source of Truth
  * 
- * Configuration for 1000ozSilverBars.com
+ * Configuration for KiloSilverBars.com
  */
 
 export const SITE_CONFIG = {
@@ -10,20 +10,20 @@ export const SITE_CONFIG = {
   // ============================================================
   
   /** Primary domain with https:// prefix */
-  domain: "https://www.1000ozsilverbars.com",
+  domain: "https://www.kilosilverbars.com",
   
   /** Canonical domain (usually same as domain) */
-  canonicalDomain: "https://www.1000ozsilverbars.com",
+  canonicalDomain: "https://www.kilosilverbars.com",
   
   /** Brand name displayed in UI and metadata */
-  brandName: "1000ozSilverBars.com",
+  brandName: "Kilo Silver Bars",
 
   // ============================================================
   // PRODUCT DEFINITION
   // ============================================================
   
   /** Primary product name */
-  primaryProduct: "1000 oz silver bars",
+  primaryProduct: "kilo silver bars",
   
   /** Metal type: "gold" | "silver" | "platinum" | "palladium" */
   metal: "silver",
@@ -32,10 +32,13 @@ export const SITE_CONFIG = {
   form: "bars",
   
   /** Size or series identifier */
-  sizeOrSeries: "1000 oz",
+  sizeOrSeries: "1 kilo",
 
-  /** Troy ounce equivalent */
-  troyOunces: 1000,
+  /** Troy ounce equivalent (1 kilo = 32.15 troy ounces) */
+  troyOunces: 32.15,
+
+  /** Gram weight */
+  grams: 1000,
 
   // ============================================================
   // MONEX API SYMBOLS
@@ -43,9 +46,9 @@ export const SITE_CONFIG = {
   
   /** 
    * Product price symbol for Monex API
-   * SBI1000 = 1000 oz silver bar (COMEX good delivery)
+   * SBK = 1 Kilo Silver Bar
    */
-  productSymbol: "SBI1000",
+  productSymbol: "SBK",
   
   /**
    * Spot index symbol for Monex API (raw metal spot price per troy ounce)
@@ -59,28 +62,26 @@ export const SITE_CONFIG = {
   
   /** Target audience description */
   angle:
-    "serious investors and institutions seeking substantial silver positions with lowest premiums per ounce",
+    "individual investors and collectors seeking an accessible entry point to substantial silver ownership with competitive premiums",
 
   /** Approved Monex.com links for authoritative references */
   monexLinks: {
-    /** 1000 oz silver bars product page */
-    productPage: "https://www.monex.com/1000-oz-silver-bullion-bars-for-sale/",
+    /** Silver bars product page */
+    productPage: "https://www.monex.com/silver/",
     /** Silver spot prices */
     spotPrices: "https://www.monex.com/silver-prices/",
     /** Investing in silver overview */
     investingOverview: "https://www.monex.com/investing-in-silver/",
-    /** 1000 oz silver bar price charts */
-    priceCharts: "https://www.monex.com/1000-oz-silver-bullion-price-charts/",
-    /** 1000 oz silver bars knowledge base */
-    knowledgeBase: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/1000-oz-silver-bars/",
+    /** Silver price charts */
+    priceCharts: "https://www.monex.com/silver-prices/",
+    /** Silver knowledge base */
+    knowledgeBase: "https://www.monex.com/knowledge-base/silver-investing/silver-bullion/",
     /** Educational articles */
     articles: {
       bullionHistory: "https://www.monex.com/knowledge/great-bullion-famine-bullionism-and-bullionist-controversy/",
-      costEffective: "https://www.monex.com/knowledge/1000-oz-silver-bars-most-cost-effective-investment/",
-      vsCoins: "https://www.monex.com/knowledge/large-1000-oz-silver-bars-vs-silver-coin-investing/",
-      bestDeals: "https://www.monex.com/knowledge/how-to-get-best-deals-on-1000-oz-silver-bars/",
-      storageAndCare: "https://www.monex.com/knowledge/storage-and-care-1000-oz-silver-bars/",
-      pricePotential: "https://www.monex.com/knowledge/upside-price-potential-1000-oz-silver-bars/",
+      investingInSilver: "https://www.monex.com/investing-in-silver/",
+      silverBars: "https://www.monex.com/silver/",
+      storageAndCare: "https://www.monex.com/knowledge-base/silver-investing/",
     },
   },
 } as const;

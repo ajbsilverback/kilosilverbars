@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/where-to-buy-1000-oz-silver-bars`,
+      url: `${baseUrl}/where-to-buy-kilo-silver-bars`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,

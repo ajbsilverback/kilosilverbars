@@ -10,16 +10,16 @@ import { pricesQA } from "@/data/qa-content";
 import { fetchProductSpot, fetchMetalSpotIndex } from "@/lib/monexSpot";
 
 export const metadata: Metadata = {
-  title: "Live 1000 oz Silver Bar Price | Silver Spot Price Today",
+  title: "Live Kilo Silver Bar Price | Silver Spot Price Today",
   description:
-    "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
+    "Track live kilo silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
   alternates: {
     canonical: `${SITE_CONFIG.canonicalDomain}/live-silver-prices`,
   },
   openGraph: {
-    title: "Live 1000 oz Silver Bar Price | Silver Spot Price Today",
+    title: "Live Kilo Silver Bar Price | Silver Spot Price Today",
     description:
-      "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts.",
+      "Track live kilo silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts.",
     url: `${SITE_CONFIG.domain}/live-silver-prices`,
   },
 };
@@ -33,18 +33,18 @@ export default async function PricesPage() {
   const spotPricePerOz = spotIndexData?.ask ?? 30;
   const formattedSpotPrice = `$${Math.round(spotPricePerOz).toLocaleString("en-US")}`;
   
-  // Calculate example prices based on live spot
-  const oneOzBarsTotal = Math.round(spotPricePerOz * 1000 * 1.10); // 10% premium
-  const hundredOzBarsTotal = Math.round(spotPricePerOz * 1000 * 1.03); // 3% avg premium
-  const thousandOzBarsTotal = Math.round(spotPricePerOz * 1000 * 1.01); // 1% premium
-  const savings = oneOzBarsTotal - thousandOzBarsTotal;
+  // Calculate example prices based on live spot (kilo = 32.15 oz)
+  const oneOzBarsTotal = Math.round(spotPricePerOz * SITE_CONFIG.troyOunces * 1.10); // 10% premium
+  const tenOzBarsTotal = Math.round(spotPricePerOz * SITE_CONFIG.troyOunces * 1.06); // 6% avg premium
+  const kiloBarsTotal = Math.round(spotPricePerOz * SITE_CONFIG.troyOunces * 1.04); // 4% premium
+  const savings = oneOzBarsTotal - kiloBarsTotal;
 
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Live 1000 oz Silver Bar Price | Silver Spot Price Today",
+    name: "Live Kilo Silver Bar Price | Silver Spot Price Today",
     description:
-      "Track live 1000 oz silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
+      "Track live kilo silver bar prices updated on page load. Compare spot prices, understand premiums, and view historical charts. Data sourced from Monex.",
     url: `${SITE_CONFIG.domain}/live-silver-prices`,
     isPartOf: {
       "@type": "WebSite",
@@ -71,18 +71,18 @@ export default async function PricesPage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What determines the price of a 1000 oz silver bar?",
+        name: "What determines the price of a kilo silver bar?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The price of a 1000 oz silver bar consists of the spot price of silver multiplied by 1000 troy ounces, plus a premium that covers refining, distribution, and dealer margins. 1000 oz bar premiums typically range from 0.5-2% over spot, the lowest of any common bar size.",
+          text: "The price of a kilo silver bar consists of the spot price of silver multiplied by 32.15 troy ounces, plus a premium that covers refining, distribution, and dealer margins. Kilo bar premiums typically range from 3-6% over spot, offering competitive value compared to smaller bars.",
         },
       },
       {
         "@type": "Question",
-        name: "Why do 1000 oz silver bars have lower premiums than smaller bars?",
+        name: "Why do kilo silver bars have lower premiums than smaller bars?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "1000 oz bars have lower premiums because manufacturing costs are spread across more silver content. Producing one 1000 oz bar is more efficient than producing 1000 individual 1 oz bars. The per-ounce production cost decreases with bar size.",
+          text: "Kilo bars have lower premiums because manufacturing costs are spread across more silver content. Producing one kilo bar is more efficient than producing 32 individual 1 oz bars. The per-ounce production cost decreases with bar size.",
         },
       },
       {
@@ -97,11 +97,11 @@ export default async function PricesPage() {
   };
 
   const aiSummaryBullets = [
-    "This page displays live 1000 oz silver bar prices via Monex data",
+    "This page displays live silver prices via Monex data",
     "Track silver spot prices per troy ounce for reference",
-    "Understand how spot prices relate to 1000 oz bar retail pricing",
-    "Learn about premium structures: 1000 oz bars have 0.5-2% premiums (lowest available)",
-    "Compare premiums across bar sizes (1 oz vs 100 oz vs 1000 oz)",
+    "Understand how spot prices relate to kilo bar retail pricing",
+    "Learn about premium structures: kilo bars have 3-6% premiums (better than 1 oz)",
+    "Compare premiums across bar sizes (1 oz vs 10 oz vs kilo)",
   ];
 
   return (
@@ -121,7 +121,7 @@ export default async function PricesPage() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">
-              <span className="silver-text">1000 oz Silver Bar Price</span>
+              <span className="silver-text">Kilo Silver Bar Price</span>
               <br />
               <span className="text-gray-900">& Live Silver Spot Prices</span>
             </h1>
@@ -131,10 +131,10 @@ export default async function PricesPage() {
 
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed mt-6 text-left">
               Track live silver prices and understand how spot pricing affects 
-              the cost of 1000 oz silver bars. Use these tools to make informed 
+              the cost of kilo silver bars. Use these tools to make informed 
               decisions about your precious metals investments. Return to our{" "}
               <Link href="/" className="text-navy-700 hover:underline">
-                overview of 1000 oz silver bars
+                overview of kilo silver bars
               </Link>{" "}
               or explore our{" "}
               <Link href="/resources" className="text-navy-700 hover:underline">
@@ -148,7 +148,7 @@ export default async function PricesPage() {
       {/* Pricing Zone - Live Cards */}
       <section className="py-10 md:py-12 section-dark">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          {/* Live 1000 oz Silver Bar Price Card */}
+          {/* Live Silver Price Card */}
           <LiveGbozSpotCard showCta={false} />
 
           {/* Live Silver Spot Index Card */}
@@ -171,29 +171,28 @@ export default async function PricesPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold mb-6 text-center text-gray-900">
-              Understanding <span className="silver-text">1000 oz Bar Pricing</span>
+              Understanding <span className="silver-text">Kilo Bar Pricing</span>
             </h2>
 
             <div className="prose prose-lg max-w-none space-y-6">
               <div className="card">
                 <h3 className="text-2xl font-display font-semibold mb-4 text-navy-700">
-                  Spot Price vs. 1000 oz Bar Price
+                  Spot Price vs. Kilo Bar Price
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-4">
-                  When purchasing a 1000 oz silver bar, you&apos;ll pay a premium 
-                  above the calculated spot value (spot price × 1000 oz). 
+                  When purchasing a kilo silver bar, you&apos;ll pay a premium 
+                  above the calculated spot value (spot price × 32.15 oz). 
                   The spot price represents the current market rate for silver 
-                  traded in bulk on commodities exchanges like COMEX.
+                  traded in bulk on commodities exchanges.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  The 1000 oz bar commands the <strong className="text-gray-900">lowest 
-                  retail premium</strong> of common bar sizes, typically just 
-                  0.5-2% over spot. This{" "}
+                  Kilo bars offer <strong className="text-gray-900">competitive 
+                  retail premiums</strong>, typically 3-6% over spot. This{" "}
                   <Link href="/resources/premiums-explained" className="text-navy-700 hover:underline">
                     premium
                   </Link>{" "}
                   covers refining, assaying, shipping, and{" "}
-                  <Link href="/where-to-buy-1000-oz-silver-bars" className="text-navy-700 hover:underline">
+                  <Link href="/where-to-buy-kilo-silver-bars" className="text-navy-700 hover:underline">
                     dealer margins
                   </Link>.
                 </p>
@@ -201,14 +200,14 @@ export default async function PricesPage() {
 
               <div className="card">
                 <h3 className="text-xl md:text-2xl font-display font-semibold mb-4 text-navy-700">
-                  Why 1000 oz Bars Have the Lowest Premiums
+                  Why Kilo Bars Have Better Premiums
                 </h3>
                 <ul className="space-y-4 text-gray-600">
                   <li className="flex items-start">
                     <span className="text-navy-600 mr-3">•</span>
                     <span>
                       <strong className="text-gray-900">Economy of Scale:</strong> Producing 
-                      one 1000 oz bar is more efficient than producing 1000+ individual 
+                      one kilo bar is more efficient than producing 32 individual 
                       1 oz bars with the same total silver content.
                     </span>
                   </li>
@@ -223,17 +222,17 @@ export default async function PricesPage() {
                   <li className="flex items-start">
                     <span className="text-navy-600 mr-3">•</span>
                     <span>
-                      <strong className="text-gray-900">Institutional Standard:</strong> 1000 oz 
-                      bars are the standard for COMEX delivery and institutional trading, 
-                      creating efficient markets with competitive pricing.
+                      <strong className="text-gray-900">Global Standard:</strong> The metric 
+                      kilogram is internationally recognized, ensuring efficient 
+                      markets and competitive pricing worldwide.
                     </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-navy-600 mr-3">•</span>
                     <span>
-                      <strong className="text-gray-900">Simpler Packaging:</strong> No 
-                      elaborate packaging, tubes, or capsules required for 
-                      institutional-grade bars.
+                      <strong className="text-gray-900">Simpler Packaging:</strong> Kilo 
+                      bars require less elaborate packaging than tubes of 
+                      smaller bars or individually sealed products.
                     </span>
                   </li>
                 </ul>
@@ -244,8 +243,8 @@ export default async function PricesPage() {
                   Premium Comparison by Size
                 </h3>
                 <p className="text-gray-600 leading-relaxed mb-3">
-                  The premium savings on 1000 oz bars are substantial when building 
-                  a significant silver position. See our{" "}
+                  The premium savings on kilo bars are meaningful when building 
+                  a silver position. See our{" "}
                   <Link href="/resources/size-comparison" className="text-navy-700 hover:underline">
                     complete bar size comparison
                   </Link>{" "}
@@ -253,14 +252,14 @@ export default async function PricesPage() {
                 </p>
                 <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
                   <p className="text-gray-500 text-sm mb-2">
-                    <strong className="text-navy-700">Example at {formattedSpotPrice}/oz spot:</strong>
+                    <strong className="text-navy-700">Example at {formattedSpotPrice}/oz spot (buying 32.15 oz of silver):</strong>
                   </p>
                   <ul className="text-gray-600 text-sm space-y-2">
-                    <li>• <strong className="text-gray-900">1000 × 1 oz bars (10% avg premium):</strong> ~${oneOzBarsTotal.toLocaleString("en-US")}</li>
-                    <li>• <strong className="text-gray-900">10 × 100 oz bars (3% avg premium):</strong> ~${hundredOzBarsTotal.toLocaleString("en-US")}</li>
-                    <li>• <strong className="text-gray-900">1 × 1000 oz bar (1% premium):</strong> ~${thousandOzBarsTotal.toLocaleString("en-US")}</li>
+                    <li>• <strong className="text-gray-900">32 × 1 oz bars (10% avg premium):</strong> ~${oneOzBarsTotal.toLocaleString("en-US")}</li>
+                    <li>• <strong className="text-gray-900">3 × 10 oz bars (6% avg premium):</strong> ~${tenOzBarsTotal.toLocaleString("en-US")}</li>
+                    <li>• <strong className="text-gray-900">1 × kilo bar (4% premium):</strong> ~${kiloBarsTotal.toLocaleString("en-US")}</li>
                     <li className="pt-2 border-t border-silver-200">
-                      <strong className="text-navy-700">Savings:</strong> ~${savings.toLocaleString("en-US")} by choosing 1000 oz over 1 oz bars
+                      <strong className="text-navy-700">Savings:</strong> ~${savings.toLocaleString("en-US")} by choosing kilo over 1 oz bars
                     </li>
                   </ul>
                 </div>
@@ -277,15 +276,15 @@ export default async function PricesPage() {
       <section className="py-10 md:py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-500 mb-6">
-            For detailed market analysis and 1000 oz bar pricing:
+            For detailed market analysis and silver pricing:
           </p>
           <a
-            href="https://www.monex.com/1000-oz-silver-bullion-price-charts/"
+            href="https://www.monex.com/silver-prices/"
             target="_blank"
             rel="nofollow noopener"
             className="inline-flex items-center text-navy-700 hover:text-navy-600 transition-colors"
           >
-            <span>Monex 1000 oz silver bar price charts</span>
+            <span>Monex silver price charts</span>
             <svg
               className="w-4 h-4 ml-2"
               fill="none"
@@ -307,16 +306,16 @@ export default async function PricesPage() {
       <section className="py-12 md:py-16 section-dark">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-display font-bold mb-4 text-gray-900">
-            Learn More About 1000 oz Silver Bars
+            Learn More About Kilo Silver Bars
           </h2>
           <p className="text-gray-600 mb-6">
             Explore our comprehensive{" "}
             <Link href="/resources" className="text-navy-700 hover:underline">
               educational resources
             </Link>{" "}
-            to deepen your understanding of 1000 oz bar investing, or return to our{" "}
+            to deepen your understanding of kilo bar investing, or return to our{" "}
             <Link href="/" className="text-navy-700 hover:underline">
-              1000 oz silver bar overview
+              kilo silver bar overview
             </Link>.
           </p>
           <Link href="/resources" className="btn-primary">

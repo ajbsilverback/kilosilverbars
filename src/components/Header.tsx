@@ -10,7 +10,7 @@ export default function Header() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/live-silver-prices", label: "Silver Prices" },
-    { href: "/where-to-buy-1000-oz-silver-bars", label: "Where to Buy" },
+    { href: "/where-to-buy-kilo-silver-bars", label: "Where to Buy" },
     { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },
   ];
@@ -22,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 rounded-lg bg-navy-700 flex items-center justify-center border border-navy-600">
-              <span className="text-white font-bold text-xs">1000</span>
+              <span className="text-white font-bold text-xs">1kg</span>
             </div>
             <span className="text-xl font-display font-semibold text-navy-700">
               {SITE_CONFIG.brandName}
