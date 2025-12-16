@@ -11,6 +11,7 @@
  */
 
 import { ProductSpotSummary } from "./monexSpot";
+import { SITE_CONFIG } from "./siteConfig";
 
 /**
  * Configuration for price display
@@ -49,19 +50,32 @@ function formatPrice(value: number, prefix: string = "~"): string {
 
 /**
  * Token types supported by the system
+ * 
+ * Kilo bar tokens (based on SBK ask price ~$1,100):
+ * - BAR_PRICE: $1,100 (kilo bar ask price)
+ * - CAPITAL_REQUIREMENT: ~$1,100 (kilo bar ask price rounded)
+ * - CAPITAL_REQUIREMENT_RANGE: ~$1,000–$1,200 (kilo bar ± 5%)
+ * - CAPITAL_REQUIREMENT_PLUS: ~$1,100+ (kilo bar with plus)
+ * - LIQUIDITY_THRESHOLD: ~$1,100+ (same as plus)
+ * 
+ * Comparison bar tokens (calculated from spot = kiloAsk / 32.15):
+ * - ONE_OZ_BAR_PRICE_RANGE: $32–$38 (spot × 1.05 to spot × 1.15)
+ * - TEN_OZ_BAR_PRICE_RANGE: $330–$360 (spot × 10 × 1.04 to spot × 10 × 1.08)
  */
 export type PriceTokenType = 
-  | "BAR_PRICE"                     // $1,100 (ask price formatted, no tilde)
-  | "CAPITAL_REQUIREMENT"           // ~$1,100 (ask price rounded)
-  | "CAPITAL_REQUIREMENT_RANGE"     // ~$1,000–$1,200 (ask ± premium band)
-  | "CAPITAL_REQUIREMENT_PLUS"      // ~$1,100+ (ask rounded with plus)
-  | "LIQUIDITY_THRESHOLD";          // ~$1,100+ (same as plus, for liquidity context)
+  | "BAR_PRICE"                     // $1,100 (kilo bar ask price, no tilde)
+  | "CAPITAL_REQUIREMENT"           // ~$1,100 (kilo bar ask price rounded)
+  | "CAPITAL_REQUIREMENT_RANGE"     // ~$1,000–$1,200 (kilo bar ± premium band)
+  | "CAPITAL_REQUIREMENT_PLUS"      // ~$1,100+ (kilo bar with plus)
+  | "LIQUIDITY_THRESHOLD"           // ~$1,100+ (same as plus, for liquidity context)
+  | "ONE_OZ_BAR_PRICE_RANGE"        // $32–$38 (1 oz bar with 5-15% premium)
+  | "TEN_OZ_BAR_PRICE_RANGE";       // $330–$360 (10 oz bar with 4-8% premium)
 
 /**
  * Regex pattern to match tokens in strings
  * Matches: {{TOKEN_NAME}}
  */
-const TOKEN_PATTERN = /\{\{(BAR_PRICE|CAPITAL_REQUIREMENT|CAPITAL_REQUIREMENT_RANGE|CAPITAL_REQUIREMENT_PLUS|LIQUIDITY_THRESHOLD)\}\}/g;
+const TOKEN_PATTERN = /\{\{(BAR_PRICE|CAPITAL_REQUIREMENT|CAPITAL_REQUIREMENT_RANGE|CAPITAL_REQUIREMENT_PLUS|LIQUIDITY_THRESHOLD|ONE_OZ_BAR_PRICE_RANGE|TEN_OZ_BAR_PRICE_RANGE)\}\}/g;
 
 /**
  * Resolves a single token to its display value
@@ -80,6 +94,9 @@ export function resolveToken(
 
   const askPrice = priceData.ask;
   const roundedAsk = roundToNearest(askPrice, roundingIncrement);
+  
+  // Derive spot price from kilo bar price (kilo = 32.15 troy oz)
+  const spotPricePerOz = askPrice / SITE_CONFIG.troyOunces;
 
   switch (tokenType) {
     case "BAR_PRICE":
@@ -97,6 +114,21 @@ export function resolveToken(
     case "CAPITAL_REQUIREMENT_PLUS":
     case "LIQUIDITY_THRESHOLD":
       return `${formatPrice(roundedAsk)}+`;
+
+    // 1 oz bar: spot price + 5-15% premium, rounded to nearest $5
+    case "ONE_OZ_BAR_PRICE_RANGE": {
+      const oneOzLow = roundToNearest(spotPricePerOz * 1.05, 5);
+      const oneOzHigh = roundToNearest(spotPricePerOz * 1.15, 5);
+      return `$${oneOzLow}–$${oneOzHigh}`;
+    }
+
+    // 10 oz bar: (spot × 10) + 4-8% premium, rounded to nearest $10
+    case "TEN_OZ_BAR_PRICE_RANGE": {
+      const tenOzBase = spotPricePerOz * 10;
+      const tenOzLow = roundToNearest(tenOzBase * 1.04, 10);
+      const tenOzHigh = roundToNearest(tenOzBase * 1.08, 10);
+      return `$${tenOzLow}–$${tenOzHigh}`;
+    }
 
     default:
       return "current market price";
@@ -141,7 +173,3 @@ export function findTokens(text: string): PriceTokenType[] {
   }
   return tokens;
 }
-
-
-
-

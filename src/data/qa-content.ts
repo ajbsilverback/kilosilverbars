@@ -3,12 +3,18 @@ import { QAItem } from "@/components/QASection";
 /**
  * FAQ Content with Dynamic Price Tokens
  * 
- * Supported tokens (replaced at render time with live kilo silver bar prices):
- * - {{BAR_PRICE}}                 -> "$1,100" (ask price, no tilde)
- * - {{CAPITAL_REQUIREMENT}}       -> "~$1,100" (ask price rounded)
- * - {{CAPITAL_REQUIREMENT_RANGE}} -> "~$1,000–$1,200" (ask ± 5% band)
- * - {{CAPITAL_REQUIREMENT_PLUS}}  -> "~$1,100+" (ask price with plus)
- * - {{LIQUIDITY_THRESHOLD}}       -> "~$1,100+" (same as plus, for liquidity context)
+ * Supported tokens (replaced at render time with live prices from SBK API):
+ * 
+ * Kilo bar tokens:
+ * - {{BAR_PRICE}}                 -> "$1,100" (kilo bar ask price, no tilde)
+ * - {{CAPITAL_REQUIREMENT}}       -> "~$1,100" (kilo bar ask price rounded)
+ * - {{CAPITAL_REQUIREMENT_RANGE}} -> "~$1,000–$1,200" (kilo bar ± 5% band)
+ * - {{CAPITAL_REQUIREMENT_PLUS}}  -> "~$1,100+" (kilo bar with plus)
+ * - {{LIQUIDITY_THRESHOLD}}       -> "~$1,100+" (same as plus)
+ * 
+ * Comparison bar tokens (calculated from derived spot price):
+ * - {{ONE_OZ_BAR_PRICE_RANGE}}    -> "$32–$38" (1 oz bar with 5-15% premium)
+ * - {{TEN_OZ_BAR_PRICE_RANGE}}    -> "$330–$360" (10 oz bar with 4-8% premium)
  */
 
 export const homeQA: QAItem[] = [
