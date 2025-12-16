@@ -6,6 +6,9 @@ import QASection from "@/components/QASection";
 import { resourcesQA } from "@/data/qa-content";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
+// Force dynamic rendering for live price data
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Kilo Silver Bar Guides: Premiums, Storage, Brands & More",
   description:

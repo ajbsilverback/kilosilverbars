@@ -3,6 +3,9 @@ import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 import { fetchProductSpot } from "@/lib/monexSpot";
 
+// Force dynamic rendering for live price data
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Where to Buy Kilo Silver Bars: Dealers, Options & Storage",
   description:

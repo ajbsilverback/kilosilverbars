@@ -8,6 +8,9 @@ import CapitalRequirementsCard from "@/components/CapitalRequirementsCard";
 import { homeQA } from "@/data/qa-content";
 import { fetchProductSpot, formatUSD } from "@/lib/monexSpot";
 
+// Force dynamic rendering for live price data
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Kilo Silver Bars: 1,000 Grams of Pure Silver Bullion",
   description:

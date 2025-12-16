@@ -9,6 +9,9 @@ import LiveSilverSpotIndexCard from "@/components/LiveSilverSpotIndexCard";
 import { pricesQA } from "@/data/qa-content";
 import { fetchProductSpot, fetchMetalSpotIndex } from "@/lib/monexSpot";
 
+// Force dynamic rendering for live price data
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Live Kilo Silver Bar Price | Silver Spot Price Today",
   description:

@@ -11,6 +11,9 @@ import { resourceQA } from "@/data/qa-content";
 import { fetchProductSpot } from "@/lib/monexSpot";
 import { replaceTokens } from "@/lib/priceTokens";
 
+// Force dynamic rendering for live price data
+export const dynamic = "force-dynamic";
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
