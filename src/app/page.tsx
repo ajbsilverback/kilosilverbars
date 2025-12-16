@@ -363,23 +363,23 @@ export default async function HomePage() {
                   <td className="py-4 px-6 font-medium">Entry Cost</td>
                   <td className="py-4 px-6 text-center">
                     {priceData ? (
-                      <>~${Math.round(priceData.ask * 1.10).toLocaleString("en-US")}</>
+                      <>~${Math.round((priceData.ask / SITE_CONFIG.troyOunces) * 1.10).toLocaleString("en-US")}</>
                     ) : (
-                      "~$35"
+                      "~$38"
                     )}
                   </td>
                   <td className="py-4 px-6 text-center">
                     {priceData ? (
-                      <>~${Math.round(priceData.ask * 10 * 1.06).toLocaleString("en-US")}</>
+                      <>~${Math.round((priceData.ask / SITE_CONFIG.troyOunces) * 10 * 1.06).toLocaleString("en-US")}</>
                     ) : (
-                      "~$320"
+                      "~$360"
                     )}
                   </td>
                   <td className="py-4 px-6 text-center">
                     {priceData ? (
-                      <>~${Math.round(priceData.ask * SITE_CONFIG.troyOunces * 1.04).toLocaleString("en-US")}</>
+                      <>~${Math.round(priceData.ask).toLocaleString("en-US")}</>
                     ) : (
-                      "~$1,050"
+                      "~$1,100"
                     )}
                   </td>
                 </tr>
@@ -456,7 +456,7 @@ export default async function HomePage() {
               <p className="text-gray-600 mb-4">
                 Unlike holding multiple small bars, you cannot partially 
                 liquidate a kilo bar. When you sell, you&apos;re converting 
-                approximately {priceData ? `$${Math.round(priceData.ask * SITE_CONFIG.troyOunces).toLocaleString("en-US")}` : "$1,000"}+ to cash at once.
+                approximately {priceData ? `$${Math.round(priceData.ask).toLocaleString("en-US")}` : "$1,100"}+ to cash at once.
               </p>
               <p className="text-gray-500 text-sm">
                 <strong className="text-navy-700">Consider:</strong> Many 

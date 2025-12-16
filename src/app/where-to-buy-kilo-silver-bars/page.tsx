@@ -80,8 +80,8 @@ const onlineDealers = [
 export default async function WhereToBuyPage() {
   const priceData = await fetchProductSpot();
   const formattedPrice = priceData 
-    ? `$${Math.round(priceData.ask * SITE_CONFIG.troyOunces).toLocaleString("en-US")}` 
-    : "$1,000";
+    ? `$${Math.round(priceData.ask).toLocaleString("en-US")}` 
+    : "$1,100";
 
   const webPageSchema = {
     "@context": "https://schema.org",
