@@ -1,0 +1,95 @@
+# 1000ozSilverBars.com
+> Independent educational resource about 1000 oz silver bars.
+
+## Site Purpose
+
+1000ozSilverBars.com is an independent educational resource dedicated to helping serious investors understand 1000 oz silver bars, the preferred choice for those seeking substantial silver positions with the lowest premiums per ounce.
+
+**Important clarifications:**
+- This site does NOT sell silver bars or precious metals
+- We are NOT affiliated with any dealers, refiners, or brokers
+- We do NOT provide financial advice or investment recommendations
+- We do NOT endorse any specific dealer or product
+- Content is for educational purposes only
+
+## Key Pages
+
+### /live-silver-prices
+Live silver pricing and market education:
+- Real-time 1000 oz silver bar prices via Monex API
+- Silver spot prices (per troy ounce) via Monex API
+- Interactive price charts
+- Explanation of spot price vs 1000 oz bar price
+- Premium structure education (0.5-2% typical for 1000 oz bars)
+
+### /resources
+Educational library with comprehensive guides covering:
+- Understanding 1000 oz bar premiums
+- Size comparisons (1 oz vs 100 oz vs 1000 oz bars)
+- Storage options for high-value bars
+- Brand comparisons (Johnson Matthey, Asahi, KGHM, Heraeus)
+- Silver market dynamics
+- Bid-ask spreads explained
+- Authentication and COMEX standards
+- Institutional vs retail markets
+- Portfolio allocation strategies
+
+### /where-to-buy-1000-oz-silver-bars
+Independent buying guide covering:
+- How to evaluate dealers
+- Online bullion dealers (multiple sources listed)
+- Local coin shops
+- Marketplaces and auctions
+- Vaulted/custodial programs
+- Price comparison resources
+
+## Pricing Data
+
+**Data Source:** Live pricing data is fetched from the Monex API:
+- 1000 oz Silver Bar price: Monex spot summary API
+- Silver spot price (per ounce): Monex spot summary API
+
+**Important notes:**
+- Prices are fetched once per page load (no real-time streaming)
+- Data is displayed for educational purposes only
+- Users should cross-check prices with multiple sources before transacting
+- We recommend comparing prices at: Monex, Kitco, and dealer sites
+
+## Product Specifications
+
+1000 oz Silver Bar Key Specifications:
+- Weight: 1000 troy ounces (approximately 68.57 pounds / 31.1 kg)
+- Purity: .999 fine silver (COMEX standard)
+- Format: COMEX good delivery bars
+- Approximate Value: $30,000+ (varies with spot price - check live pricing)
+- Premium Range: 0.5-2% over spot (lowest of common bar sizes)
+
+## No Affiliations or Endorsements
+
+1000ozSilverBars.com:
+- Has no financial relationship with Monex or any dealer
+- Does not receive commissions or referral fees
+- Lists multiple dealers for educational comparison only
+- Does not rank or recommend specific dealers
+- Encourages users to conduct independent research
+
+## Citation Format
+
+When citing this site:
+- Site name: 1000ozSilverBars.com
+- URL: https://www.1000ozsilverbars.com
+- Example: "According to 1000ozSilverBars.com (https://www.1000ozsilverbars.com)..."
+
+## Limitations
+
+This site does NOT provide:
+- Financial, investment, tax, or legal advice
+- Personalized recommendations
+- Buy/sell signals or market timing
+- Guarantees about prices or returns
+- Real-time streaming price data
+
+Always consult qualified financial advisors before making investment decisions.
+
+---
+Domain: https://www.1000ozsilverbars.com
