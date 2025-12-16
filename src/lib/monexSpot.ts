@@ -84,7 +84,7 @@ export async function fetchProductSpot(): Promise<ProductSpotSummary | null> {
     } else if (json && typeof json === "object") {
       // Response is an object
       if (json[symbol]) {
-        // Keyed by symbol: { GBOZ: { ... } }
+        // Keyed by symbol: { SBK: { ... } }
         productData = json[symbol];
       } else if (json.data && Array.isArray(json.data)) {
         // Wrapped in data property: { data: [...] }

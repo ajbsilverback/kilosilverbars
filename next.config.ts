@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/where-to-buy",
-        destination: "/where-to-buy-1000-oz-silver-bars",
+        destination: "/where-to-buy-kilo-silver-bars",
         permanent: true,
       },
     ];
